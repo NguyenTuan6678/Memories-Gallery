@@ -1,20 +1,35 @@
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+import "../index.css";
 
 export default function Home() {
   return (
-    <div>
+    <motion.div
+      className="homeTitle"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <h1>
-        <Link to="/Spring">Spring</Link>
+        <Link className="spring" to="/Spring">
+          Spring
+        </Link>
       </h1>
       <h1>
-        <Link to="/Summer">Summer</Link>
+        <Link className="summer" to="/Summer">
+          Summer
+        </Link>
       </h1>
       <h1>
-        <Link to="/Autumn">Autumn</Link>
+        <Link className="autumn" to="/Autumn">
+          Autumn
+        </Link>
       </h1>
       <h1>
-        <Link to="/Winter">Winter</Link>
+        <Link className="winter" to="/Winter">
+          Winter
+        </Link>
       </h1>
-    </div>
+    </motion.div>
   );
 }
