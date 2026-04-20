@@ -1,15 +1,15 @@
-import hanoiSpring1v from "/hanoi_spring_1.jpg";
-import hanoiSpring2v from "/hanoi_spring_2.jpg";
-import hanoiSpring3v from "/hanoi_spring_3.jpg";
-import hanoiSummer1v from "/hanoi_summer_1.jpg";
-import hanoiSummer2v from "/hanoi_summer_2.jpg";
-import hanoiSummer3v from "/hanoi_summer_3.jpg";
-import hanoiAutumn1v from "/hanoi_autumn_1.jpg";
-import hanoiAutumn2v from "/hanoi_autumn_2.jpg";
-import hanoiAutumn3v from "/hanoi_autumn_3.jpg";
-import hanoiWinter1v from "/hanoi_winter_1.jpg";
-import hanoiWinter2v from "/hanoi_winter_2.jpg";
-import hanoiWinter3v from "/hanoi_winter_3.jpg";
+import hanoiSpring1v from "/hanoi_spring_1_crop.jpg";
+import hanoiSpring2v from "/hanoi_spring_2_crop.jpg";
+import hanoiSpring3v from "/hanoi_spring_3_crop.jpg";
+import hanoiSummer1v from "/hanoi_summer_1_crop.jpg";
+import hanoiSummer2v from "/hanoi_summer_2_crop.jpg";
+import hanoiSummer3v from "/hanoi_summer_3_crop.jpg";
+import hanoiAutumn1v from "/hanoi_autumn_1_crop.jpg";
+import hanoiAutumn2v from "/hanoi_autumn_2_crop.jpg";
+import hanoiAutumn3v from "/hanoi_autumn_3_crop.jpg";
+import hanoiWinter1v from "/hanoi_winter_1_crop.jpg";
+import hanoiWinter2v from "/hanoi_winter_2_crop.jpg";
+import hanoiWinter3v from "/hanoi_winter_3_crop.jpg";
 
 export type HanoiSceneEntry = {
   src: string;
@@ -24,81 +24,81 @@ export const hanoiScenes: Record<ImageId, HanoiSceneEntry[]> = {
   Spring: [
     {
       src: hanoiSpring1v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -460,
+      offsetY: -190,
+      rotate: -8,
     },
     {
       src: hanoiSpring2v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -10,
+      offsetY: -300,
+      rotate: 2,
     },
     {
       src: hanoiSpring3v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: 430,
+      offsetY: -100,
+      rotate: -4,
     },
   ],
   Summer: [
     {
       src: hanoiSummer1v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -500,
+      offsetY: -100,
+      rotate: 3,
     },
     {
       src: hanoiSummer2v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -10,
+      offsetY: -270,
+      rotate: -4,
     },
     {
       src: hanoiSummer3v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: 400,
+      offsetY: -70,
+      rotate: -2,
     },
   ],
   Autumn: [
     {
       src: hanoiAutumn1v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -420,
+      offsetY: -110,
+      rotate: -5,
     },
     {
       src: hanoiAutumn2v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: 50,
+      offsetY: -200,
+      rotate: 4,
     },
     {
       src: hanoiAutumn3v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: 450,
+      offsetY: 20,
+      rotate: 10,
     },
   ],
   Winter: [
     {
       src: hanoiWinter1v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -500,
+      offsetY: -10,
+      rotate: -5,
     },
     {
       src: hanoiWinter2v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: -10,
+      offsetY: -100,
+      rotate: 3,
     },
     {
       src: hanoiWinter3v,
-      offsetX: 0,
-      offsetY: 0,
-      rotate: 0,
+      offsetX: 370,
+      offsetY: 200,
+      rotate: -7,
     },
   ],
 };

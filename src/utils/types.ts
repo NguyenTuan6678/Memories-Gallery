@@ -3,7 +3,9 @@ export type MousePosition = {
   y: number;
 };
 
-export type ImageId = "Spring" | "Summer" | "Autumn" | "Winter";
+export const imageIds = ["Spring", "Summer", "Autumn", "Winter"] as const;
+
+export type ImageId = (typeof imageIds)[number];
 
 export type ImageTitle = {
   id: ImageId;
