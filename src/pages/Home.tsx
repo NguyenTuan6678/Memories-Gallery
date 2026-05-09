@@ -11,26 +11,6 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* <h1>
-        <Link className="spring" to="/Spring">
-          Spring
-        </Link>
-      </h1>
-      <h1>
-        <Link className="summer" to="/Summer">
-          Summer
-        </Link>
-      </h1>
-      <h1>
-        <Link className="autumn" to="/Autumn">
-          Autumn
-        </Link>
-      </h1>
-      <h1>
-        <Link className="winter" to="/Winter">
-          Winter
-        </Link>
-      </h1> */}
       {imageIds.map((season) => (
         <h1 key={season}>
           <Link className={season.toLowerCase()} to={`/${season}`}>
