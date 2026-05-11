@@ -79,6 +79,11 @@ function HomePage() {
   const scenes = hoveredText ? hanoiScenes[hoveredText] : null;
 
   const { i18n } = useTranslation();
+  const isVI = i18n.language === "vi";
+
+  const customFont = isVI
+    ? "'Playfair Display', serif"
+    : "'Be Vietnam Pro', sans-serif";
 
   const SEASON_TITLES = {
     en: {
@@ -135,12 +140,18 @@ function HomePage() {
 
         <div className="flex flex-col items-center text-center">
           {/* Subtitle */}
-          <p className="mb-2 text-[0.72rem] uppercase tracking-[0.35em] text-[#7a9468]">
+          <p
+            className="mb-2 text-[0.72rem] uppercase tracking-[0.35em] text-[#7a9468]"
+            style={{ fontFamily: customFont }}
+          >
             {i18n.language === "vi" ? "Một Góc Hà Nội" : "A Glimpse of Hanoi"}
           </p>
 
           {/* Title */}
-          <h2 className="font-serif text-xl text-neutral-800 md:text-2xl">
+          <h2
+            className="font-serif text-xl text-neutral-800 md:text-2xl"
+            style={{ fontFamily: customFont }}
+          >
             {i18n.language === "vi"
               ? "Bốn Mùa Hà Nội"
               : "The Four Seasons of Hanoi"}
@@ -215,6 +226,7 @@ function HomePage() {
                   style={{
                     color: colors.default,
                     willChange: "transform, opacity",
+                    fontFamily: customFont,
                   }}
                 >
                   {SEASON_TITLES[i18n.language as "en" | "vi"][
@@ -254,7 +266,10 @@ function HomePage() {
         transition={{ delay: 0.2 }}
         className="absolute bottom-8 text-center"
       >
-        <p className="text-[0.65rem] uppercase tracking-[0.25em] text-neutral-400">
+        <p
+          className="text-[0.65rem] uppercase tracking-[0.25em] text-neutral-400"
+          style={{ fontFamily: customFont }}
+        >
           {i18n.language === "vi"
             ? "Du Hành · Văn Hoá · Ký Ức"
             : "Travel · Culture · Memory"}
