@@ -9,5 +9,34 @@ export type ImageId = (typeof imageIds)[number];
 
 export type ImageTitle = {
   id: ImageId;
-  displayName: string;
+
+  en: string;
+
+  vi: string;
 };
+
+export const imageTitles: ImageTitle[] = [
+  {
+    id: "Spring",
+    en: "Spring",
+    vi: "Mùa Xuân",
+  },
+
+  {
+    id: "Summer",
+    en: "Summer",
+    vi: "Mùa Hạ",
+  },
+
+  {
+    id: "Autumn",
+    en: "Autumn",
+    vi: "Mùa Thu",
+  },
+
+  {
+    id: "Winter",
+    en: "Winter",
+    vi: "Mùa Đông",
+  },
+];
