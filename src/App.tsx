@@ -14,17 +14,7 @@ import Summer from "./pages/Summer";
 import Autumn from "./pages/Autumn";
 import Winter from "./pages/Winter";
 import { useIsMobile } from "./hooks/useIsMobile";
-
-// ─────────────────────────────────────────────────────────────
-// Season colors
-// ─────────────────────────────────────────────────────────────
-
-const SEASON_COLORS: Record<ImageId, { default: string; hover: string }> = {
-  Spring: { default: "#c8d8c0", hover: "#7a9468" },
-  Summer: { default: "#d8c8a0", hover: "#c4873a" },
-  Autumn: { default: "#d8b8a0", hover: "#b85c38" },
-  Winter: { default: "#a8b8c8", hover: "#4a7a9e" },
-};
+import { SEASON_COLORS } from "./utils/season";
 
 // ─────────────────────────────────────────────────────────────
 // Motion variants

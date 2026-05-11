@@ -7,7 +7,7 @@ import { createPortal } from "react-dom";
 import { autumnEN } from "../contents/autumn/en";
 import { autumnVI } from "../contents/autumn/vi";
 
-import type { Section } from "../utils/season";
+import { SEASON_COLORS, type Section } from "../utils/season";
 
 // ── Google Fonts ──────────────────────────────────────────────
 const fontLink = document.createElement("link");
