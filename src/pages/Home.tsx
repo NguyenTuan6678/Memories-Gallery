@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import "../index.css";
 import { imageTitles } from "../utils/types";
 import { useTranslation } from "react-i18next";
 
