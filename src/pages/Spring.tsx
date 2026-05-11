@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
 
 import { springEN } from "../contents/spring/en";
 import { springVI } from "../contents/spring/vi";
@@ -225,9 +226,57 @@ function SectionCard({
   );
 }
 
+function BackToTop({
+  sentinelRef,
+}: {
+  sentinelRef: React.RefObject<HTMLDivElement | null>;
+}) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(!entry.isIntersecting),
+      { threshold: 0 },
+    );
+    if (sentinelRef.current) observer.observe(sentinelRef.current);
+    return () => observer.disconnect();
+  }, [sentinelRef]);
+
+  const handleClick = () => {
+    // thử tất cả các scroll container có thể
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    sentinelRef.current
+      ?.closest(".page")
+      ?.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <AnimatePresence>
+      {visible && (
+        <motion.button
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 16 }}
+          transition={{ duration: 0.3 }}
+          onClick={handleClick}
+          className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-11 h-11 rounded-full shadow-lg"
+          style={{ background: "#7a9468", color: "#fff", fontSize: "1.1rem" }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          ↑
+        </motion.button>
+      )}
+    </AnimatePresence>
+  );
+}
+
 // ── Main ──────────────────────────────────────────────────────
 export default function Spring() {
   const { i18n } = useTranslation();
+
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   const isVI = i18n.language === "vi";
 
@@ -354,6 +403,8 @@ export default function Spring() {
           </div>
         </nav>
 
+        <div ref={sentinelRef} />
+
         {/* HERO */}
         <header className="max-w-3xl mx-auto px-6 pt-16 pb-10 text-center">
           <motion.p
@@ -452,6 +503,26 @@ export default function Spring() {
             />
           ))}
         </div>
+
+        <footer className="max-w-3xl mx-auto px-6 pt-6 pb-6 text-center text-sm">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            style={{
+              fontFamily: headingFont,
+              fontStyle: "italic",
+              fontSize: "1.2rem",
+              color: "#888",
+              lineHeight: 1.75,
+              maxWidth: "520px",
+              margin: "0 auto 2rem",
+            }}
+          >
+            {isVI ? "Du Hành · Văn Hoá · Ký Ức" : "Travel · Culture · Memory"}
+          </motion.p>
+        </footer>
+        <BackToTop sentinelRef={sentinelRef} />
       </motion.div>
     </AnimatePresence>
   );
