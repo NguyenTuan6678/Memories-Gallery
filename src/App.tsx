@@ -24,7 +24,7 @@ const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.08,
+      staggerChildren: 0.2,
       delayChildren: 0.1,
     },
   },
@@ -37,13 +37,13 @@ const containerVariants: Variants = {
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 60, skewY: 4 },
+  hidden: { opacity: 0, y: 60, skewY: 4, filter: "blur(6px)" },
 
   visible: {
     opacity: 1,
     y: 0,
     skewY: 0,
-
+    filter: "blur(0px)",
     transition: {
       type: "spring",
       stiffness: 180,
@@ -55,7 +55,7 @@ const itemVariants: Variants = {
   exit: {
     opacity: 0,
     y: -40,
-
+    filter: "blur(4px)",
     transition: {
       duration: 0.2,
       ease: "easeIn",
@@ -292,7 +292,7 @@ function PageTransition({ children }: { children: ReactNode }) {
       exit={{ opacity: 0, y: -16 }}
       transition={{
         type: "spring",
-        stiffness: 200,
+        stiffness: 400,
         damping: 30,
         mass: 1,
       }}
