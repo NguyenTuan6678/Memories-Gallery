@@ -277,7 +277,7 @@ function BackToTop() {
 
 // ── Main ──────────────────────────────────────────────────────
 export default function Spring() {
-  const color = SEASON_COLORS.Spring.accent;
+  const color = SEASON_COLORS.Spring.hover;
   const { i18n } = useTranslation();
 
   const isVI = i18n.language === "vi";
