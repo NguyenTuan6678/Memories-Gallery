@@ -285,10 +285,12 @@ export default function Summer() {
 
   // dynamic fonts
   const headingFont = isVI
-    ? "'Be Vietnam Pro', sans-serif"
-    : "'Playfair Display', serif";
+    ? "'Playfair Display', serif"
+    : "'Be Vietnam Pro', sans-serif";
 
-  const bodyFont = isVI ? "'Be Vietnam Pro', sans-serif" : "'Lato', sans-serif";
+  const bodyFont = isVI
+    ? "'Be Vietnam Pro', sans-serif"
+    : "'Nunito', sans-serif";
 
   return (
     <AnimatePresence mode="wait">

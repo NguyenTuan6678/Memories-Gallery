@@ -7,13 +7,13 @@ import { createPortal } from "react-dom";
 import { springEN } from "../contents/spring/en";
 import { springVI } from "../contents/spring/vi";
 
-import type { Section } from "../utils/season";
+import { SEASON_COLORS, type Section } from "../utils/season";
 
 // ── Google Fonts ──────────────────────────────────────────────
 const fontLink = document.createElement("link");
 fontLink.rel = "stylesheet";
 fontLink.href =
-  "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap";
+  "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap";
 if (!document.head.querySelector("[href*='Playfair']")) {
   document.head.appendChild(fontLink);
 }
@@ -286,10 +286,12 @@ export default function Spring() {
 
   // dynamic fonts
   const headingFont = isVI
-    ? "'Be Vietnam Pro', sans-serif"
-    : "'Playfair Display', serif";
+    ? "'Playfair Display', serif"
+    : "'Be Vietnam Pro', sans-serif";
 
-  const bodyFont = isVI ? "'Be Vietnam Pro', sans-serif" : "'Lato', sans-serif";
+  const bodyFont = isVI
+    ? "'Be Vietnam Pro', sans-serif"
+    : "'Nunito', sans-serif";
 
   return (
     <AnimatePresence mode="wait">
