@@ -231,6 +231,7 @@ function HomePage() {
           );
         })}
       </motion.div>
+
       {/* Screen reader */}
       <span className="sr-only" aria-live="polite">
         {hoveredText
@@ -239,6 +240,7 @@ function HomePage() {
             : `Showing scenes from ${hoveredText}`
           : ""}
       </span>
+
       {/* Floating image previews */}
       <AnimatePresence>
         {scenes?.map((item, index) => (
@@ -251,6 +253,7 @@ function HomePage() {
           />
         ))}
       </AnimatePresence>
+
       {/* Footer */}
       <motion.div
         key={`footer-${i18n.language}`}
