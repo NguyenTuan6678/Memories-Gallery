@@ -11,6 +11,7 @@
   color: #2c2c2c;
   background-color: #faf9f6;
 
+  /* scrollbar-gutter: stable; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
@@ -29,4 +30,5 @@ body,
 
 body {
   overflow-x: hidden;
+  overflow-y: scroll;
 }
