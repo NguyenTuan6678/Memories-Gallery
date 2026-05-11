@@ -276,6 +276,7 @@ function BackToTop() {
 
 // ── Main ──────────────────────────────────────────────────────
 export default function Summer() {
+  const color = SEASON_COLORS.Summer.hover;
   const { i18n } = useTranslation();
 
   const isVI = i18n.language === "vi";
@@ -314,6 +315,7 @@ export default function Summer() {
             {/* Back */}
             <Link
               to="/"
+              style={{ color }}
               className="text-[0.72rem] uppercase tracking-[0.18em] font-boldtext-[#7a9468]"
             >
               ← {i18n.language === "vi" ? "Quay lại" : "Back"}
@@ -367,6 +369,7 @@ export default function Summer() {
         tracking-[0.28em]
         text-[#7a9468]
       "
+              style={{ color }}
             >
               {i18n.language === "vi"
                 ? "Du lịch · Văn hóa"

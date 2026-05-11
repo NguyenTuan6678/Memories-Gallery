@@ -277,6 +277,7 @@ function BackToTop() {
 
 // ── Main ──────────────────────────────────────────────────────
 export default function Spring() {
+  const color = SEASON_COLORS.Spring.accent;
   const { i18n } = useTranslation();
 
   const isVI = i18n.language === "vi";
@@ -315,6 +316,7 @@ export default function Spring() {
             {/* Back */}
             <Link
               to="/"
+              style={{ color }}
               className="text-[0.72rem] uppercase tracking-[0.18em] font-boldtext-[#7a9468]"
             >
               ← {i18n.language === "vi" ? "Quay lại" : "Back"}
@@ -368,6 +370,7 @@ export default function Spring() {
         tracking-[0.28em]
         text-[#7a9468]
       "
+              style={{ color }}
             >
               {i18n.language === "vi"
                 ? "Du lịch · Văn hóa"
