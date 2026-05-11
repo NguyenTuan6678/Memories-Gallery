@@ -105,7 +105,6 @@ function HomePage() {
     <main className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-[#faf9f6] pt-44">
       {/* Header */}
       <motion.div
-        key={i18n.language}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
@@ -161,6 +160,7 @@ function HomePage() {
 
       {/* Season Titles */}
       <motion.div
+        key={i18n.language}
         className="mt-16 flex flex-col items-center justify-center gap-2 text-nowrap font-black uppercase"
         variants={containerVariants}
         initial="hidden"
@@ -205,18 +205,11 @@ function HomePage() {
               <Link to={`/${season}`}>
                 <motion.h2
                   key={`${season}-${i18n.language}`}
-                  initial={{
-                    opacity: 0,
-                    y: 10,
-                  }}
                   animate={{
                     opacity: 1,
                     y: 0,
+                    filter: "blur(0px)",
                     color: isHovered ? colors.hover : colors.default,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: -10,
                   }}
                   transition={{
                     duration: 0.32,
