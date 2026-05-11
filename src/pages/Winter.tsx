@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 import { winterEN } from "../contents/winter/en";
 import { winterVI } from "../contents/winter/vi";
@@ -226,32 +227,17 @@ function SectionCard({
   );
 }
 
-function BackToTop({
-  sentinelRef,
-}: {
-  sentinelRef: React.RefObject<HTMLDivElement | null>;
-}) {
+function BackToTop() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { threshold: 0 },
-    );
-    if (sentinelRef.current) observer.observe(sentinelRef.current);
-    return () => observer.disconnect();
-  }, [sentinelRef]);
+    const id = setInterval(() => {
+      setVisible(window.scrollY > 200);
+    }, 150);
+    return () => clearInterval(id);
+  }, []);
 
-  const handleClick = () => {
-    // thử tất cả các scroll container có thể
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
-    sentinelRef.current
-      ?.closest(".page")
-      ?.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  return (
+  return createPortal(
     <AnimatePresence>
       {visible && (
         <motion.button
@@ -259,16 +245,33 @@ function BackToTop({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: 0.3 }}
-          onClick={handleClick}
-          className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-11 h-11 rounded-full shadow-lg"
-          style={{ background: "#7a9468", color: "#fff", fontSize: "1.1rem" }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{
+            position: "fixed",
+            bottom: "2rem",
+            right: "2rem",
+            zIndex: 9999,
+            background: "#7a9468",
+            color: "#fff",
+            fontSize: "1.1rem",
+            width: "2.75rem",
+            height: "2.75rem",
+            borderRadius: "50%",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            border: "none",
+          }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
           ↑
         </motion.button>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
 
