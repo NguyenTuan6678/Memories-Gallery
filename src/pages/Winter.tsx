@@ -279,8 +279,6 @@ function BackToTop() {
 export default function Summer() {
   const { i18n } = useTranslation();
 
-  const sentinelRef = useRef<HTMLDivElement>(null);
-
   const isVI = i18n.language === "vi";
 
   // instant content switch
@@ -406,8 +404,6 @@ export default function Summer() {
           </div>
         </nav>
 
-        <div ref={sentinelRef} />
-
         {/* HERO */}
         <header className="max-w-3xl mx-auto px-6 pt-16 pb-10 text-center">
           <motion.p
@@ -527,7 +523,7 @@ export default function Summer() {
             {isVI ? "Du Hành · Văn Hoá · Ký Ức" : "Travel · Culture · Memory"}
           </motion.p>
         </footer>
-        <BackToTop sentinelRef={sentinelRef} />
+        <BackToTop />
       </motion.div>
     </AnimatePresence>
   );
