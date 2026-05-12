@@ -194,15 +194,22 @@ export default function HeroBand({
                 alignItems: "center",
                 justifyContent: "center",
                 zIndex: 20,
+                padding: "0 clamp(1rem, 6vw, 2rem)",
+                textAlign: "center",
+                overflow: "hidden",
               }}
             >
               <p
                 style={{
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.35em",
+                  fontSize: "clamp(0.58rem, 2.8vw, 0.75rem)",
+                  letterSpacing: "clamp(0.12em, 2vw, 0.35em)",
                   textTransform: "uppercase",
                   color: "#7a9468",
                   marginBottom: "0.5rem",
+                  maxWidth: "min(88vw, 620px)",
+                  lineHeight: 1.5,
+                  overflowWrap: "break-word",
+                  wordBreak: "normal",
                 }}
               >
                 {isVI ? subtitleVI : subtitleEN}
