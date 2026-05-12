@@ -14,6 +14,7 @@ export interface Section {
   splashA: string;
   splashB: string;
 
+  image?: string;
   items: SectionItem[];
 }
 

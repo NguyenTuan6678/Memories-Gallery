@@ -9,6 +9,7 @@ export const springEN: Section[] = [
     splashB: "#e8f0f5",
     intro:
       "Spring in Hanoi (February–April) marks the city's gentle transition from winter — the air turns soft, humid, and alive with the scent of rain on warm pavement.",
+    image: "/Spring2.jpg",
     items: [
       {
         heading: "Temperature",
@@ -36,6 +37,7 @@ export const springEN: Section[] = [
     splashB: "#e8f5d6",
     intro:
       "No season transforms Hanoi's streets more dramatically than spring. The city becomes a living canvas of blossoms, petals, and fragrant air.",
+    image: "/Spring4.jpg",
     items: [
       {
         heading: "Hoa sưa (milk flower)",
@@ -67,6 +69,7 @@ export const springEN: Section[] = [
     splashB: "#d6e8f5",
     intro:
       "Spring is festival season in Hanoi. Temples fill with incense smoke, streets buzz with calligraphy brushes, and the city's cultural heritage feels more alive than at any other time of year.",
+    image: "/Spring1.jpg",
     items: [
       {
         heading: "Hoan Kiem Lake & Pedestrian Street",
