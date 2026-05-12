@@ -43,6 +43,8 @@ The project is still being refined for mobile, but the main goal is to capture t
 
 ## 🎞️ Preview
 
+https://github.com/user-attachments/assets/
+
 ## 🌸 Seasons
 
 - Spring — mist, blossoms, light rain, and quiet streets
