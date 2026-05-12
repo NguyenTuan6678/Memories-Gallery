@@ -43,7 +43,7 @@ The project is still being refined for mobile, but the main goal is to capture t
 
 ## 🎞️ Preview
 
-https://github.com/user-attachments/assets/
+[https://github.com/user-attachments/assets/](https://github.com/NguyenTuan6678/Memories-Gallery/blob/578557b46c01e873683e83aef9c5a8877c4d78ec/public/preview.mp4)
 
 ## 🌸 Seasons
 
