@@ -9,6 +9,7 @@ export const summerEN: Section[] = [
     splashB: "#f5d080",
     intro:
       "Summer in Hanoi (May–August) is a vibrant yet intense symphony of golden sunshine and sudden downpours — the city at its most energetic, though the heat can sometimes be overwhelming.",
+    image: "/Summer1.jpg",
     items: [
       {
         heading: "Temperature",
@@ -36,6 +37,7 @@ export const summerEN: Section[] = [
     splashB: "#f0e8a0",
     intro:
       "Under the blazing sun, Hanoi's scenery becomes sharper and more saturated than any other season — a city that refuses to soften even in the heat.",
+    image: "/Summer2.jpg",
     items: [
       {
         heading: "Flamboyant flowers (hoa phượng)",
@@ -63,6 +65,7 @@ export const summerEN: Section[] = [
     splashB: "#d0f0e8",
     intro:
       "To survive — and truly enjoy — Hanoi's summer, locals follow a rhythm: cool shelter by day, lake breezes and street life by evening.",
+    image: "/Summer3.jpg",
     items: [
       {
         heading: "West Lake at dusk",
@@ -94,6 +97,7 @@ export const summerEN: Section[] = [
     splashB: "#f0e0b0",
     intro:
       "Hanoi's summer cuisine prioritizes refreshing, light dishes — easy on the stomach, high in hydration, and designed to be eaten slowly in good company.",
+    image: "/Food2.jpg",
     items: [
       {
         heading: "Bia hơi (street-side draft beer)",

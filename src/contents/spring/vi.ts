@@ -9,6 +9,7 @@ export const springVI: Section[] = [
     splashB: "#e8f0f5",
     intro:
       "Mùa xuân Hà Nội (tháng 2–4) là khoảng giao mùa dịu dàng sau mùa đông — không khí trở nên mềm mại, ẩm nhẹ và phảng phất mùi mưa trên mặt đường còn vương hơi lạnh.",
+    image: "/Spring1.jpg",
     items: [
       {
         heading: "Nhiệt độ",
@@ -37,6 +38,7 @@ export const springVI: Section[] = [
     splashB: "#e8f5d6",
     intro:
       "Không mùa nào khiến Hà Nội thay đổi nhiều như mùa xuân. Thành phố như được phủ lên bởi sắc hoa, những con phố thơm hương cây cỏ và bầu không khí dịu dàng rất riêng.",
+    image: "/Spring2.jpg",
     items: [
       {
         heading: "Hoa sưa",
@@ -69,6 +71,7 @@ export const springVI: Section[] = [
     splashB: "#d6e8f5",
     intro:
       "Mùa xuân cũng là mùa lễ hội. Chùa chiền nghi ngút khói hương, phố phường nhộn nhịp thư pháp và những giá trị văn hoá truyền thống hiện lên rõ nét hơn bao giờ hết.",
+    image: "/Spring3.jpg",
     items: [
       {
         heading: "Hồ Gươm & phố đi bộ",
@@ -105,6 +108,7 @@ export const springVI: Section[] = [
     splashB: "#f0d6c0",
     intro:
       "Mùa xuân Hà Nội mang đến cảm giác đặc biệt trong ẩm thực — những món nước nóng hổi, rau thơm còn đọng hơi sương và các món ăn truyền thống chỉ xuất hiện dịp đầu năm.",
+    image: "/Food1.jpg",
     items: [
       {
         heading: "Bánh chưng & xôi gấc",

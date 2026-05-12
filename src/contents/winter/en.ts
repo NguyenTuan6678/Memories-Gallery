@@ -9,6 +9,7 @@ export const winterEN: Section[] = [
     splashB: "#c8d8e8",
     intro:
       "When winter arrives (December–January), Hanoi no longer boasts vibrant colors — instead, it exudes a quiet, silvery beauty that evokes nostalgia and a strange, inexplicable warmth.",
+    image: "/Winter1.jpg",
     items: [
       {
         heading: "Temperature",
@@ -63,6 +64,7 @@ export const winterEN: Section[] = [
     splashB: "#c0c8d8",
     intro:
       "Winter's chill transforms how Hanoi is experienced — you move differently, linger longer, and find warmth in small, specific places.",
+    image: "/Winter2.jpg",
     items: [
       {
         heading: "Long Bien Bridge on a winter afternoon",
@@ -94,6 +96,7 @@ export const winterEN: Section[] = [
     splashB: "#d8c8b8",
     intro:
       "Hanoi's winter cuisine is built around heat, depth, and gathering — dishes designed not just to nourish but to make you want to stay at the table.",
+    image: "/Winter3.jpg",
     items: [
       {
         heading: "Bánh trôi, bánh chay (steamed rice dumplings)",
@@ -129,6 +132,7 @@ export const winterEN: Section[] = [
     splashB: "#c0d0d8",
     intro:
       "Winter is Hanoi's most underrated season — fewer tourists, more atmosphere, and the city at its most authentically itself.",
+    image: "/Food4.jpg",
     items: [
       {
         heading: "Embrace the grey",

@@ -9,6 +9,7 @@ export const autumnVI: Section[] = [
     splashB: "#e8d4a0",
     intro:
       "Hà Nội mùa thu (tháng 9–11) như một bài thơ nhẹ nhàng, lãng mạn viết bằng màu vàng và hổ phách. Đây là mùa mà bất kỳ ai đã từng rời Hà Nội đều khắc khoải nhớ về — cả thời tiết lẫn không khí đều đẹp đến nao lòng.",
+    image: "/Autumn1.jpg",
     items: [
       {
         heading: "Nhiệt độ",
@@ -36,6 +37,7 @@ export const autumnVI: Section[] = [
     splashB: "#e8c090",
     intro:
       "Mùa thu biến Hà Nội thành phiên bản điện ảnh nhất của chính nó — lá rụng vàng đường, ánh sáng mật ong và một mùi hương mỗi năm trở về như một ký ức cũ.",
+    image: "/Autumn2.jpg",
     items: [
       {
         heading: "Lá vàng rơi",
@@ -67,6 +69,7 @@ export const autumnVI: Section[] = [
     splashB: "#d0c0a0",
     intro:
       "Mùa thu là mùa Hà Nội sinh ra để sống. Thời tiết cuối cùng cũng khiến việc đi bộ trở thành niềm vui, và thành phố hé lộ những chi tiết — một mái ngói rêu phong, một con ngõ tràn ánh sáng — mà nắng hè và mưa thu che khuất suốt cả năm.",
+    image: "/Autumn3.jpg",
     items: [
       {
         heading: "Phố cổ đi bộ",
@@ -98,6 +101,7 @@ export const autumnVI: Section[] = [
     splashB: "#d8b880",
     intro:
       "Mùa thu là lúc những món ăn đặc sắc, mang tính mùa vụ nhất của Hà Nội xuất hiện — thoáng qua, gắn với đất và nhịp điệu của mùa gặt.",
+    image: "/Food3.jpg",
     items: [
       {
         heading: "Cốm Vòng",

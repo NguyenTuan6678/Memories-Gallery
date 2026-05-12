@@ -6,9 +6,13 @@ import HeroBand from "./KeyFrame";
 import BackToTop from "./BackToTop";
 import SectionCard from "./SectionCard";
 
+import springCharacter from "/cat.gif";
+
 import { SEASON_COLORS, type Section } from "../utils/season";
 import { languageFade } from "../utils/animation";
 import SeasonNavbar from "./SeasonNavbar";
+import SeasonFooter from "./SeasonFooter";
+import ThankYouPopup from "./ThankYouPopup";
 
 type SeasonConfig = {
   titleEN: string;
@@ -16,6 +20,9 @@ type SeasonConfig = {
 
   subtitleEN: string;
   subtitleVI: string;
+
+  heroBandTitleEN: string;
+  heroBandTitleVI: string;
 
   heroDescriptionEN: string;
   heroDescriptionVI: string;
@@ -145,10 +152,10 @@ export default function SeasonPage({ season, config }: Props) {
       {/* HERO BAND */}
       <HeroBand
         key={`${season}-${i18n.language}`}
-        titleEN={config.titleEN}
-        titleVI={config.titleVI}
-        subtitleEN={config.subtitleEN}
-        subtitleVI={config.subtitleVI}
+        titleEN={config.heroBandTitleEN}
+        titleVI={config.heroBandTitleVI}
+        subtitleEN={config.heroDescriptionEN}
+        subtitleVI={config.heroDescriptionVI}
         leftIcon={config.leftIcon}
         rightIcon={config.rightIcon}
         gradient={config.gradient}
@@ -177,6 +184,17 @@ export default function SeasonPage({ season, config }: Props) {
                   bodyFont={bodyFont}
                 />
               ))}
+            </div>
+
+            <div className="mt-auto">
+              <SeasonFooter isVI={isVI} headingFont={headingFont} />
+            </div>
+
+            <div>
+              <ThankYouPopup
+                characterSrc={springCharacter}
+                characterAlt="Spring Character"
+              />
             </div>
           </motion.div>
         )}

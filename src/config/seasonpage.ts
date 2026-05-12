@@ -18,11 +18,11 @@ export const SEASON_PAGE_CONFIG = {
     subtitleEN: "Hanoi • February – April",
     subtitleVI: "Hà Nội • Tháng 2 – Tháng 4",
 
-    heroDescriptionEN:
-      "Both gentle and serene, yet vibrant with life — a guide to fully experiencing the charm of the capital during the first days of the year.",
+    heroBandTitleEN: "Whispers of Spring",
+    heroBandTitleVI: "Lời Thì Thầm Mùa Xuân",
 
-    heroDescriptionVI:
-      "Vừa dịu dàng vừa đầy sức sống — hành trình khám phá vẻ đẹp của thủ đô trong những ngày đầu năm.",
+    heroDescriptionEN: "Rain-kissed streets and blooming silence",
+    heroDescriptionVI: "Phố ướt mưa và những khoảng lặng nở hoa",
 
     leftIcon: "🌸",
     rightIcon: "☁️",
@@ -40,11 +40,11 @@ export const SEASON_PAGE_CONFIG = {
     subtitleEN: "Hanoi • May – July",
     subtitleVI: "Hà Nội • Tháng 5 – Tháng 7",
 
-    heroDescriptionEN:
-      "Golden sunlight, sudden rain, and streets filled with the scent of blooming lotus.",
+    heroBandTitleEN: "Under the Amber Sun",
+    heroBandTitleVI: "Dưới Nắng Hổ Phách",
 
-    heroDescriptionVI:
-      "Nắng vàng, những cơn mưa bất chợt và hương sen lan khắp phố phường.",
+    heroDescriptionEN: "Heat, lotus scent, and passing showers",
+    heroDescriptionVI: "Nắng nóng, hương sen và những cơn mưa ngang qua",
 
     leftIcon: "🌿",
     rightIcon: "☀️",
@@ -62,11 +62,11 @@ export const SEASON_PAGE_CONFIG = {
     subtitleEN: "Hanoi • August – October",
     subtitleVI: "Hà Nội • Tháng 8 – Tháng 10",
 
-    heroDescriptionEN:
-      "Cool breeze, golden leaves, and the nostalgic beauty of Hanoi’s most beloved season.",
+    heroBandTitleEN: "A Season Remembered",
+    heroBandTitleVI: "Mùa Của Những Hoài Niệm",
 
-    heroDescriptionVI:
-      "Gió heo may, lá vàng và vẻ đẹp hoài niệm của mùa được yêu thích nhất Hà Nội.",
+    heroDescriptionEN: "Golden air, soft winds, and old memories",
+    heroDescriptionVI: "Không khí vàng, gió nhẹ và những ký ức cũ",
 
     leftIcon: "🍂",
     rightIcon: "🕊️",
@@ -84,11 +84,11 @@ export const SEASON_PAGE_CONFIG = {
     subtitleEN: "Hanoi • November – January",
     subtitleVI: "Hà Nội • Tháng 11 – Tháng 1",
 
-    heroDescriptionEN:
-      "Cold air, quiet streets, and warm lights glowing through the misty nights.",
+    heroBandTitleEN: "Stillness After Dusk",
+    heroBandTitleVI: "Tĩnh Lặng Sau Hoàng Hôn",
 
-    heroDescriptionVI:
-      "Không khí se lạnh, phố phường yên tĩnh và ánh đèn ấm áp giữa màn sương đêm.",
+    heroDescriptionEN: "Cold mornings and warm windows",
+    heroDescriptionVI: "Sáng lạnh và những ô cửa ấm đèn",
 
     leftIcon: "❄️",
     rightIcon: "🌙",

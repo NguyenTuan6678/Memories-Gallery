@@ -9,6 +9,7 @@ export const summerVI: Section[] = [
     splashB: "#f5d080",
     intro:
       "Mùa hè Hà Nội (tháng 5–8) là bản giao hưởng sôi động nhưng gay gắt của nắng vàng và những cơn mưa bất chợt — thành phố ở trạng thái năng động nhất, dù cái nóng đôi khi thực sự khó chịu.",
+    image: "/Summer1.jpg",
     items: [
       {
         heading: "Nhiệt độ",
@@ -36,6 +37,7 @@ export const summerVI: Section[] = [
     splashB: "#f0e8a0",
     intro:
       "Dưới ánh mặt trời chói chang, Hà Nội hiện ra với màu sắc đậm đà và sắc nét hơn bất kỳ mùa nào — một thành phố không chịu nhạt màu dù nắng gắt đến đâu.",
+    image: "/Summer2.jpg",
     items: [
       {
         heading: "Hoa phượng vĩ",
@@ -63,6 +65,7 @@ export const summerVI: Section[] = [
     splashB: "#d0f0e8",
     intro:
       "Để sống sót — và thực sự tận hưởng — mùa hè Hà Nội, người địa phương có nhịp sống riêng: tìm bóng mát ban ngày, ra hồ hóng gió và lang thang phố xá mỗi chiều tối.",
+    image: "/Summer3.jpg",
     items: [
       {
         heading: "Hồ Tây lúc hoàng hôn",
@@ -94,6 +97,7 @@ export const summerVI: Section[] = [
     splashB: "#f0e0b0",
     intro:
       "Ẩm thực mùa hè Hà Nội ưu tiên những món thanh mát, nhẹ bụng — dễ ăn, nhiều nước và được tạo ra để thưởng thức chậm rãi trong không khí vui vẻ.",
+    image: "/Food2.jpg",
     items: [
       {
         heading: "Bia hơi vỉa hè",

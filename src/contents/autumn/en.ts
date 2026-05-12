@@ -9,6 +9,7 @@ export const autumnEN: Section[] = [
     splashB: "#e8d4a0",
     intro:
       "Hanoi in autumn (September–November) is like a gentle, romantic poem written in gold and amber. This is the season that anyone who has ever left Hanoi longs for — both the weather and the atmosphere are breathtakingly beautiful.",
+    image: "/Autumn1.jpg",
     items: [
       {
         heading: "Temperature",
@@ -36,6 +37,7 @@ export const autumnEN: Section[] = [
     splashB: "#e8c090",
     intro:
       "Autumn transforms Hanoi into its most cinematic self — fallen leaves, honey light, and a fragrance that returns every year like an old memory.",
+    image: "/Autumn2.jpg",
     items: [
       {
         heading: "Falling leaves",
@@ -67,6 +69,7 @@ export const autumnEN: Section[] = [
     splashB: "#d0c0a0",
     intro:
       "Autumn is the season Hanoi was designed for. The weather finally makes walking a pleasure, and the city reveals details — a tiled roofline, a light-filled alley — that heat and rain obscure the rest of the year.",
+    image: "/Autumn3.jpg",
     items: [
       {
         heading: "The Old Quarter on foot",
@@ -98,6 +101,7 @@ export const autumnEN: Section[] = [
     splashB: "#d8b880",
     intro:
       "Autumn is when Hanoi's most distinctive, seasonal dishes appear — fleeting, locally sourced, and deeply tied to the rhythm of the harvest.",
+    image: "/Food3.jpg",
     items: [
       {
         heading: "Cốm Vòng (green sticky rice)",
