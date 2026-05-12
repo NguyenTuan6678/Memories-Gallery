@@ -167,13 +167,7 @@ export default function SeasonPage({ season, config }: Props) {
       <AnimatePresence>
         {heroComplete && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <div
-              style={{
-                maxWidth: "1040px",
-                margin: "3rem auto 0",
-                padding: "0 3rem 4rem",
-              }}
-            >
+            <div className="mx-auto mt-10 w-full max-w-260 px-3 pb-16 sm:px-6 md:px-12">
               {sections.map((section, i) => (
                 <SectionCard
                   key={section.title}

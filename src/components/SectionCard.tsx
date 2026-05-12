@@ -39,24 +39,35 @@ export default function SectionCard({
 
   return (
     <div
+      className="
+      grid
+      w-full
+      min-w-0
+      grid-cols-1
+      gap-8
+      md:grid-cols-2
+      md:gap-10
+    "
       style={{
-        display: "grid",
-        gridTemplateColumns: section.image ? "1fr 1fr" : "1fr",
-        gap: "2.5rem",
         alignItems: "stretch",
         marginBottom: i < total - 1 ? "3rem" : "0",
       }}
     >
-      {/* ── Text card — order đảo theo index ── */}
+      {/* TEXT CARD */}
       <div
+        className={`
+        w-full
+        min-w-0
+        ${imageOnRight ? "md:order-1" : "md:order-2"}
+        ${!section.image ? "md:col-span-2" : ""}
+      `}
         style={{
-          order: imageOnRight ? 0 : 1, // chẵn: text trước | lẻ: text sau
           overflow: "hidden",
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
           position: "relative",
-          paddingTop: "4rem",
+          paddingTop: "clamp(2.5rem, 8vw, 4rem)",
           height: "100%",
         }}
       >
@@ -76,15 +87,15 @@ export default function SectionCard({
 
         {/* Card */}
         <div
+          className="w-full min-w-0"
           style={{
             zIndex: 1,
             position: "relative",
-            width: "100%",
             background: "#ffffff",
             borderRadius: "20px",
             boxShadow:
               "0 0 1px hsl(0deg 0% 0% / 0.06), 0 4px 12px hsl(0deg 0% 0% / 0.08), 0 16px 40px hsl(0deg 0% 0% / 0.06)",
-            padding: "2.5rem 2.75rem",
+            padding: "clamp(1.15rem, 5vw, 2.75rem)",
             marginBottom: "1rem",
           }}
         >
@@ -95,9 +106,13 @@ export default function SectionCard({
               alignItems: "center",
               gap: "0.75rem",
               marginBottom: "1.25rem",
+              minWidth: 0,
             }}
           >
-            <span style={{ fontSize: "1.6rem" }}>{section.icon}</span>
+            <span style={{ fontSize: "1.6rem", flexShrink: 0 }}>
+              {section.icon}
+            </span>
+
             <span
               style={{
                 fontSize: "0.65rem",
@@ -106,22 +121,34 @@ export default function SectionCard({
                 fontWeight: 700,
                 color: "#7a9468",
                 fontFamily: bodyFont,
+                whiteSpace: "normal",
+                overflowWrap: "break-word",
               }}
             >
               {section.tag}
             </span>
-            <div style={{ flex: 1, height: "1px", background: "#ece8e2" }} />
+
+            <div
+              className="hidden sm:block"
+              style={{
+                flex: 1,
+                height: "1px",
+                background: "#ece8e2",
+              }}
+            />
           </div>
 
           {/* Title */}
           <h2
             style={{
               fontFamily: headingFont,
-              fontSize: "clamp(1.5rem, 4vw, 2.1rem)",
+              fontSize: "clamp(1.6rem, 8vw, 2.1rem)",
               fontWeight: 700,
-              lineHeight: 1.2,
+              lineHeight: 1.15,
               color: "#1a1a1a",
               marginBottom: "0.75rem",
+              overflowWrap: "break-word",
+              wordBreak: "normal",
             }}
           >
             {section.title}
@@ -130,12 +157,14 @@ export default function SectionCard({
           {/* Intro */}
           <p
             style={{
-              fontFamily: headingFont,
-              fontStyle: "italic",
-              fontSize: "1rem",
+              fontFamily: bodyFont,
+              fontStyle: "normal",
+              fontSize: "clamp(0.95rem, 4vw, 1rem)",
               color: "#888",
               lineHeight: 1.75,
               marginBottom: "1.75rem",
+              overflowWrap: "break-word",
+              wordBreak: "normal",
             }}
           >
             {section.intro}
@@ -143,37 +172,46 @@ export default function SectionCard({
 
           {/* Items */}
           <div
-            style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "1.5rem",
+            }}
           >
             {section.items.map((item, ii) => (
               <div
                 key={ii}
                 style={{
-                  paddingLeft: "1.1rem",
+                  paddingLeft: "0.9rem",
                   borderLeft: "2px solid",
                   borderColor: section.splashA,
+                  minWidth: 0,
                 }}
               >
                 <p
                   style={{
                     fontSize: "0.68rem",
-                    letterSpacing: "0.16em",
+                    letterSpacing: "0.14em",
                     textTransform: "uppercase",
                     fontWeight: 700,
                     color: "#7a9468",
                     marginBottom: "0.3rem",
                     fontFamily: bodyFont,
+                    overflowWrap: "break-word",
                   }}
                 >
                   {item.heading}
                 </p>
+
                 <p
                   style={{
-                    fontSize: "0.96rem",
-                    lineHeight: 1.8,
+                    fontSize: "clamp(0.92rem, 4vw, 0.98rem)",
+                    lineHeight: 1.75,
                     color: "#444",
                     fontWeight: 300,
                     fontFamily: bodyFont,
+                    overflowWrap: "break-word",
+                    wordBreak: "normal",
                   }}
                 >
                   {item.body}
@@ -184,24 +222,29 @@ export default function SectionCard({
         </div>
       </div>
 
-      {/* ── Ảnh — chỉ render khi có, order ngược với text ── */}
+      {/* IMAGE - desktop only */}
       {section.image && (
         <motion.div
+          className={`
+          hidden
+          min-w-0
+          md:block
+          ${imageOnRight ? "md:order-2" : "md:order-1"}
+        `}
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ amount: 0.2, once: true }}
           variants={imageOnRight ? imageFromRight : imageFromLeft}
           style={{
-            order: imageOnRight ? 1 : 0,
-            paddingTop: "4rem", // ← khớp với text wrapper
-            alignSelf: "stretch", // ← đáng tin hơn height: "100%"
+            paddingTop: "4rem",
+            alignSelf: "stretch",
           }}
         >
           <div
             style={{
               borderRadius: "16px",
               overflow: "hidden",
-              height: "100%", // ← fill phần còn lại sau paddingTop
+              height: "100%",
               boxShadow: "0 8px 40px hsl(0deg 0% 0% / 0.10)",
             }}
           >
@@ -210,10 +253,11 @@ export default function SectionCard({
               alt={section.title}
               style={{
                 width: "100%",
-                height: "100%", // ← fill toàn bộ container
+                height: "100%",
                 objectFit: "cover",
                 display: "block",
               }}
+              loading="lazy"
             />
           </div>
         </motion.div>
